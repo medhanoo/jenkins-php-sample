@@ -31,6 +31,11 @@ MSG = "2"
         echo '---------------------------------'
       }
 
+}
+
+
+    stage('check ssh to unode'){
+
    steps {
           sh '''
               ssh -qt -l jdeployer unode "if [-e /tmp/${MSG}]
@@ -40,7 +45,7 @@ MSG = "2"
                   "
             '''
       }
-
+    }
 		}
 	}
 
