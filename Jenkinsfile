@@ -17,9 +17,9 @@ MSG = "PiplelineVariable"
       
       {
       
-        sh 'ssh -qt -l jdeployer unode ${HOME}'
+        sh 'ssh -qt -l jdeployer unode hostname'
         echo '---------------------------------'
-        echo "${env.MSG}"
+        echo "${MSG}"
         echo '---------------------------------'
       }
     
