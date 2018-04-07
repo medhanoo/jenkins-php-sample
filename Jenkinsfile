@@ -19,7 +19,7 @@ MSG = "PiplelineVariable"
       
         sh 'ssh -qt -l jdeployer unode "lsb_release -a"'
         echo '---------------------------------'
-        echo ${env.MSG}
+        echo "${env.MSG}"
         echo '---------------------------------'
       }
     
