@@ -37,13 +37,13 @@ MSG = "2"
     stage('multiline try'){
 
    steps {
-          sh '''
+          sh """
               ssh -qt -l jdeployer unode "if [-e /tmp/${MSG}]
                 then
                   mkdir ${MSG}
                 fi
                   "
-            '''
+            """
       }
     }
 		}
