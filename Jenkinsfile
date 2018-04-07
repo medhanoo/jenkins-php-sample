@@ -17,7 +17,7 @@ MSG = "PiplelineVariable"
       
       {
       
-        sh 'ssh -qt -l jdeployer unode hostname'
+        sh 'ssh -qt -l jdeployer unode "if [ -e /tmp ] ; then mkdir /tmp/1 ; fi"'
         echo '---------------------------------'
         echo "${MSG}"
         echo '---------------------------------'
