@@ -34,7 +34,7 @@ MSG = "2"
 }
 
 
-    stage('check ssh to unode'){
+    stage('multiline try'){
 
    steps {
           sh '''
@@ -49,5 +49,4 @@ MSG = "2"
 		}
 	}
 
-  }
 
