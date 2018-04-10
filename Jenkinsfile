@@ -50,6 +50,17 @@ MSG = "2"
             """
       }
     }
+
+  stage('parallel runs') {
+    parallel {
+          
+        stage('1') { sh 'echo a >> /tmp/data.txt' }
+      
+      }
+
+  }
+
+
 		}
 	}
 
