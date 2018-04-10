@@ -38,7 +38,7 @@ MSG = "2"
 
    steps {
           sh """
-              ssh -qt -l jdeployer unode "if [-e /tmp/${env.MSG}]
+              ssh -qt -l jdeployer unode "if [ -e /tmp/${env.MSG} ]
                 then
                   mkdir ${MSG}
                 fi
