@@ -17,7 +17,7 @@ MSG = "2"
       
       {
       
-        sh 'ssh -qt -l jdeployer unode "if [ -e /tmp ] ; then mkdir /tmp/1 ; fi"'
+        sh 'ssh -qt -l jdeployer unode "if [ -e /tmp/1 ] ; then mkdir /tmp/1 ; fi"'
         echo '---------------------------------'
         echo "${MSG}"
         sh '((MSG++))'
