@@ -81,14 +81,14 @@ MSG = "2"
             SRC=`date +%Y%m%D`${C}
             while true
             do
-              if [ -d ${DOCROOT}/${SRC} ]
+              if [ -d \${DOCROOT}/\${SRC} ]
               then
                 ((C++))
                 SRC=`date +%Y%m%D`${C}
                 continue
               else
-                mkdir -m 755 ${DOCROOT}/${SRC}
-                chown www-data:www-data  ${DOCROOT}/${SRC}
+                mkdir -m 755 \${DOCROOT}/\${SRC}
+                chown www-data:www-data  \${DOCROOT}/\${SRC}
                 break
               fi
               "
