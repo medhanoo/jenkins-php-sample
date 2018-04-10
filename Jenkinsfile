@@ -54,8 +54,17 @@ MSG = "2"
   stage('parallel runs') {
     parallel {
           
-        stage('1') {  steps { sh 'echo a >> /tmp/data.txt'} }
-        stage('2') {  steps { sh 'echo b >> /tmp/data.txt'} }
+        stage('1') {  steps { sh ' ssh  -l jdeployer unode "echo a >> /tmp/data.txt'} }
+        stage('2') {  steps { sh ' ssh  -l jdeployer unode "echo b >> /tmp/data.txt'} }
+        stage('3') {  steps { sh ' ssh  -l jdeployer unode "echo c >> /tmp/data.txt'} }
+        stage('4') {  steps { sh ' ssh  -l jdeployer unode "echo d >> /tmp/data.txt'} }
+        stage('5') {  steps { sh ' ssh  -l jdeployer unode "echo e >> /tmp/data.txt'} }
+        stage('6') {  steps { sh ' ssh  -l jdeployer unode "echo f >> /tmp/data.txt'} }
+        stage('7') {  steps { sh ' ssh  -l jdeployer unode "echo g >> /tmp/data.txt'} }
+        stage('8') {  steps { sh ' ssh  -l jdeployer unode "echo h >> /tmp/data.txt'} }
+        stage('9') {  steps { sh ' ssh  -l jdeployer unode "echo j >> /tmp/data.txt'} }
+        stage('10') {  steps { sh ' ssh  -l jdeployer unode "echo k >> /tmp/data.txt'} }
+        stage('11') {  steps { sh ' ssh  -l jdeployer unode "echo l >> /tmp/data.txt'} }
       
       }
 
