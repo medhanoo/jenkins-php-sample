@@ -39,8 +39,13 @@ MSG = "2"
    steps {
           sh """
               ssh  -l jdeployer unode "
-                echo 1 > /tmp/a
-                echo 2 > /tmp/b
+                if [ ${USER} == jdeployer ]
+                then
+                  echo "matched after ssh"
+                else
+                  echo "this is what happened : ${USER}"              
+                fi 
+                
                 "
             """
       }
