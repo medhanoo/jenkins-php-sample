@@ -17,7 +17,7 @@ MSG = "2"
       
       {
       
-        sh 'ssh -l jdeployer unode "if [ -e /tmp/1 ] ; then mkdir /tmp/1 ; fi"'
+        sh 'ssh -l jdeployer unode "echo asdf >> /tmp/DATA.txt"'
         echo '---------------------------------'
         echo "${MSG}"
         sh '((MSG++))'
