@@ -73,6 +73,7 @@ MSG = "2"
 
   stage ('Deploying PHP application') {
 
+    steps {
       sh ''' ssh -l jdeployer unode "
 
             DOCROOT=/opt/release
@@ -92,6 +93,7 @@ MSG = "2"
               fi
               "
           '''
+    }
   } 
 
 		}
