@@ -54,7 +54,8 @@ MSG = "2"
   stage('parallel runs') {
     parallel {
           
-        stage('1') { sh 'echo a >> /tmp/data.txt' }
+        stage('1') {  steps { sh 'echo a >> /tmp/data.txt'} }
+        stage('2') {  steps { sh 'echo b >> /tmp/data.txt'} }
       
       }
 
