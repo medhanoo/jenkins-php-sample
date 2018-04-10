@@ -17,7 +17,7 @@ MSG = "2"
       
       {
       
-        sh 'ssh -qt -l jdeployer unode "if [ -e /tmp/1 ] ; then mkdir /tmp/1 ; fi"'
+        sh 'ssh -l jdeployer unode "if [ -e /tmp/1 ] ; then mkdir /tmp/1 ; fi"'
         echo '---------------------------------'
         echo "${MSG}"
         sh '((MSG++))'
@@ -38,11 +38,10 @@ MSG = "2"
 
    steps {
           sh """
-              ssh -qt -l jdeployer unode "if [ -e /tmp/${env.MSG} ]
+              ssh  -l jdeployer unode "if [ -e /tmp/${env.MSG} ]
                 then
                   mkdir ${MSG}
-                fi
-                  "
+                fi"
             """
       }
     }
