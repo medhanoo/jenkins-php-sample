@@ -61,8 +61,8 @@
             <li><a href="#">Home</a></li>
             <li>Basic</li>
           </ol>
-          <h1>Welcome to an OpenShift Application!</h1>
-          <p>The purpose of this application is to demonstrate several interesting features about OpenShift. We hope you enjoy it!</p>
+          <h1>Welcome to an Jenkins PHP Sample!</h1>
+          <p>The purpose of this application is to demonstrate jenkins pipeline for PHP application!</p>
         </div>
       </div>
       <div class="row">
@@ -77,11 +77,11 @@
             </thead>
             <tbody>
               <tr>
-                <td>Pod IP</td>
+                <td>Server IP</td>
                 <td><?php echo $_SERVER['SERVER_ADDR'] ?></td>
               </tr>
               <tr>
-                <td>Pod Port</td>
+                <td>Server Port</td>
                 <td><?php echo $_SERVER['SERVER_PORT'] ?></td>
               </tr>
             </tbody>
