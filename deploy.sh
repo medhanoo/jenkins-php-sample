@@ -21,7 +21,7 @@ sudo mv /opt/code/* "${docroot}/"
 
 sudo chown www-data:www-data -R "${docroot}"
 
-if [ -l /var/www/html ]
+if [ -L /var/www/html ]
 then
   echo "unlink /var/www/html"
   sudo unlink /var/www/html
