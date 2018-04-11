@@ -74,27 +74,17 @@ MSG = "2"
   stage ('Deploying PHP application') {
 
     steps {
-      sh ''' ssh -l jdeployer unode "
-
-            DOCROOT=/opt/release
-            C=0
-            SRC=`date +%Y%m%D`${C}
-            while true
-            do
-              if [ -d \${DOCROOT}/\${SRC} ]
-              then
-                ((C++))
-                SRC=`date +%Y%m%D`${C}
-                continue
-              else
-                mkdir -m 755 \${DOCROOT}/\${SRC}
-                chown www-data:www-data  \${DOCROOT}/\${SRC}
-                break
-              fi
-              "
-          '''
+        sh 'scp -r src/* jdeployer@unode:/opt/code/'
+        sh 'scp deploy.sh jdeployer@unode:/var/tmp/'
+        sh 'ssh  -l jdeployer unode "chmod +x /var/tmp/deploy.sh"'
     }
   } 
+ stage ('executing deploy.sh') {
+
+    steps {
+        sh '/var/tmp/deploy.sh'
+    }
+  }
 
 		}
 	}
