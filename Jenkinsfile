@@ -82,7 +82,7 @@ MSG = "2"
  stage ('executing deploy.sh') {
 
     steps {
-        sh '/var/tmp/deploy.sh'
+        sh ' ssh  -l jdeployer unode " bash/var/tmp/deploy.sh"'
     }
   }
 
