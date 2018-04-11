@@ -21,8 +21,14 @@ sudo mv /opt/code/* "${docroot}/"
 
 sudo chown www-data:www-data -R "${docroot}"
 
+
+
 if [ -L /var/www/html ]
 then
+  echo "Note current version as below"
+  echo "--------------------------------------"
+  echo "|   `ls -l /var/www/html | cut -f2 -d '>'` |"
+  echo "--------------------------------------"
   echo "unlink /var/www/html"
   sudo unlink /var/www/html
 fi
